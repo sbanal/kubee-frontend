@@ -12,7 +12,7 @@ npx create-react-app kubee-frontend --template typescript
 
 To build the app and package into a docker image, execute command:
 ```
-docker build -f Dockerfile -t kubee-frontend 
+docker build -t kubee-frontend .
 ```
 
 # Run
@@ -22,7 +22,7 @@ To run the app container locally, execute the command:
 docker run -it --rm --name kubee-frontend --link kubee-backend:kubee-backend -p 3000:80 kubee-frontend
 ```
 
-Note that this requires the backend kubee-backend in container at port 8080.
+Note that this requires the backend kubee-backend running in container at port 8080.
 For instructions how to build and run kubee-backend check the [readme](https://github.com/sbanal/kubee-backend).
 
 
