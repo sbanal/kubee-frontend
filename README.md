@@ -42,3 +42,5 @@ docker run -it --rm -p 8080:80 sbanal/kubee-frontend
 * https://create-react-app.dev/docs/getting-started/
 * https://mherman.org/blog/dockerizing-a-react-app/
 * https://docs.docker.com/docker-hub/
+* https://www.codementor.io/@jesselangford472/building-a-simple-react-hook-api-call-with-typescript-1dpji3wcyt
+

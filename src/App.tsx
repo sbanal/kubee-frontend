@@ -1,24 +1,23 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, {useState} from 'react';
 import './App.css';
+import useApi from "./hook";
 
 function App() {
+  const [getMessage, message, errorMessage] = useApi();
+  const [name, setName] = useState('Stephen');
+  // @ts-ignore
+  const handleChange = (e) => setName(e.target.value);
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
+        <h1>Kubernetes Demo</h1>
+        <h2>
+            Name: <input type="text" value={name} onChange={handleChange} />
+        </h2>
         <p>
-          Edit <code>src/App.tsx</code> and save to reload.
+            <h2>{message.message}</h2>
+            <h2 style={{ color: "red" }}>{errorMessage}</h2>
         </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+        <button onClick={() => getMessage(name)}>Submit Name</button>
     </div>
   );
 }
