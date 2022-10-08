@@ -3,7 +3,7 @@ export interface HelloResponse {
 }
 
 export const getMessage = async (name: string): Promise<HelloResponse> => {
-    return fetch('http://localhost:8080/hello', {
+    return fetch(process.env.REACT_APP_BACKEND_HOST + '/hello', {
         method: 'POST',
         headers: {
             'Accept': 'application/json',

@@ -34,7 +34,7 @@ docker push sbanal/kubee-frontend
 
 Test run:
 ```
-docker run -it --rm -p 8080:80 sbanal/kubee-frontend
+docker run -it --rm -p 3000:80 sbanal/kubee-frontend
 ```
 
 # Reference
