@@ -34,7 +34,7 @@ docker push sbanal/kubee-frontend
 
 Test run:
 ```
-docker run -it --rm -p 3000:80 sbanal/kubee-frontend
+docker run -it --rm --name kubee-frontend --link kubee-backend:kubee-backend -p 3000:80 sbanal/kubee-frontend
 ```
 
 # Reference
@@ -43,4 +43,5 @@ docker run -it --rm -p 3000:80 sbanal/kubee-frontend
 * https://mherman.org/blog/dockerizing-a-react-app/
 * https://docs.docker.com/docker-hub/
 * https://www.codementor.io/@jesselangford472/building-a-simple-react-hook-api-call-with-typescript-1dpji3wcyt
+* https://www.bogotobogo.com/DevOps/Docker/Docker-Compose-Nginx-Reverse-Proxy-Multiple-Containers.php
 
