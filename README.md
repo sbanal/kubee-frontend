@@ -19,8 +19,12 @@ docker build -f Dockerfile -t kubee-frontend
 
 To run the app container locally, execute the command:
 ```
-docker run -it --rm -p 8080:80 kubee-frontend
+docker run -it --rm --name kubee-frontend --link kubee-backend:kubee-backend -p 3000:80 kubee-frontend
 ```
+
+Note that this requires the backend kubee-backend in container at port 8080.
+For instructions how to build and run kubee-backend check the [readme](https://github.com/sbanal/kubee-backend).
+
 
 # Publish
 
