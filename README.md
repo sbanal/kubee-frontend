@@ -5,7 +5,7 @@ This is an example React frontend packaged in a docker image.
 
 This was created using npx create-react-app command
 ```
-npx create-react-app kubee-frontend
+npx create-react-app kubee-frontend --template typescript
 ```
 
 # Build
@@ -39,5 +39,6 @@ docker run -it --rm -p 8080:80 sbanal/kubee-frontend
 
 # Reference
 
+* https://create-react-app.dev/docs/getting-started/
 * https://mherman.org/blog/dockerizing-a-react-app/
 * https://docs.docker.com/docker-hub/
