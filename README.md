@@ -19,7 +19,7 @@ docker build -f Dockerfile -t kubee-frontend
 
 To run the app container locally, execute the command:
 ```
-docker run -it --rm -p 1337:80 kubee-frontend
+docker run -it --rm -p 8080:80 kubee-frontend
 ```
 
 # Publish
@@ -30,6 +30,11 @@ This assumes you are using docker desktop and you have your own Docker Hub accou
 ```
 docker build -t sbanal/kubee-frontend .
 docker push sbanal/kubee-frontend
+```
+
+Test run:
+```
+docker run -it --rm -p 8080:80 sbanal/kubee-frontend
 ```
 
 # Reference
