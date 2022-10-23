@@ -31,9 +31,19 @@ For instructions how to build and run kubee-backend check the [readme](https://g
 Before running commands below ensure that you have Signed-in in your Docker Desktop application.
 This assumes you are using docker desktop and you have your own Docker Hub account.
 
+## Publish version 1:
 ```
 docker build -t sbanal/kubee-frontend .
 docker push sbanal/kubee-frontend
+```
+
+## Publish version 2:
+
+In this version there is no custom nginx route to the hello endpoint.
+No nginx configuration file is packaged in the docker image.
+```
+docker build -f Dockerfile2 -t sbanal/kubee-frontend2 .
+docker push sbanal/kubee-frontend2
 ```
 
 Test run:
